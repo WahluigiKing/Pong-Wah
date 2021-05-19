@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BallFunction : MonoBehaviour
 {
     public float movementSpeed;
     public float extraSpeedPerHit;
@@ -18,7 +18,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         this.hitCounter = 0;
         yield return new WaitForSeconds(2);
-        if (isStartingPlayer)
+        if (isStartingPlayer1)
         {
             this.MoveBall(new Vector2(-1, 0));
         }
