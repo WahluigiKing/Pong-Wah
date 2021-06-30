@@ -23,6 +23,14 @@ public class BallFunction : MonoBehaviour
             this.MoveBall(new Vector2(-1, 0));
         }
     }
+    public void IncreaseHitCounter()
+    {
+        if (this.hitCounter * this.extraSpeedPerHit <= this.maxExtraSpeed)
+        {
+            this.hitCounter++;
+        }
+    }
+
     public void MoveBall (Vector2 dir)
     {
         dir = dir.normalized;
@@ -31,14 +39,23 @@ public class BallFunction : MonoBehaviour
 
         Rigidbody2D rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
-        rigidbody2D.velocity = dir * speed * Time.deltaTime;
+        rigidbody2D.velocity = dir * speed;
     
     }
 
+    void PositionBall(bool isStartingWahluigi)
+    {
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
-
-
-
+        if (isStartingWahluigi)
+        {
+            this.gameObject.transform.localPosition = new Vector3(-100, 0, 0);
+        }
+        else
+        {
+            this.gameObject.transform.localPosition = new Vector3(100, 0, 0);
+        }
+    }
 
 }
 
