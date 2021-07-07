@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class ScoreController : MonoBehaviour
 {
     private int scoreWahluigi = 0;
@@ -17,6 +17,7 @@ public class ScoreController : MonoBehaviour
         if(this.scoreWahluigi >= this.goalToWin || this.scoreWario >= this.goalToWin)
         {
             Debug.Log("Game won!");
+            SceneManager.LoadScene("Game Over");
         }
     }
 

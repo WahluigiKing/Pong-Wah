@@ -14,13 +14,18 @@ public class BallFunction : MonoBehaviour
     {
         StartCoroutine(this.StartBall()); 
     }
-    public IEnumerator StartBall(bool isStartingPlayer1 = true)
+    public IEnumerator StartBall(bool isStartingWahluigi = true)
     {
+        this.PositionBall(isStartingWahluigi);
         this.hitCounter = 0;
         yield return new WaitForSeconds(2);
-        if (isStartingPlayer1)
+        if (isStartingWahluigi)
         {
             this.MoveBall(new Vector2(-1, 0));
+        }
+        else
+        {
+            this.MoveBall(new Vector2(1, 0));
         }
     }
     public void IncreaseHitCounter()
@@ -49,11 +54,11 @@ public class BallFunction : MonoBehaviour
 
         if (isStartingWahluigi)
         {
-            this.gameObject.transform.localPosition = new Vector3(-100, 0, 0);
+            this.gameObject.transform.localPosition = new Vector3(-190, 0, 0);
         }
         else
         {
-            this.gameObject.transform.localPosition = new Vector3(100, 0, 0);
+            this.gameObject.transform.localPosition = new Vector3(190, 0, 0);
         }
     }
 

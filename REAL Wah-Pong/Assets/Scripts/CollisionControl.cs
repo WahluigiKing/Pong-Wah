@@ -40,11 +40,14 @@ public class CollisionControl : MonoBehaviour
         {
             Debug.Log("Collision with WallLeft");
             this.scoreController.GoalWario();
+            StartCoroutine(this.ballFunction.StartBall(true));
+
         }
         else if (collision.gameObject.name == "WallRight")
         {
             Debug.Log("Collision with WallRight");
             this.scoreController.GoalWahluigi();
+            StartCoroutine(this.ballFunction.StartBall(false));
         }
     }
        
