@@ -1864,8 +1864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 350
-  extraSpeedPerHit: 10
-  maxExtraSpeed: 600
+  extraSpeedPerHit: 20
+  maxExtraSpeed: 750
 --- !u!114 &781281205
 MonoBehaviour:
   m_ObjectHideFlags: 0
