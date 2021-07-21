@@ -1087,6 +1087,7 @@ GameObject:
   - component: {fileID: 471016210}
   - component: {fileID: 471016213}
   - component: {fileID: 471016214}
+  - component: {fileID: 471016215}
   m_Layer: 0
   m_Name: Racket Wario
   m_TagString: Untagged
@@ -1211,12 +1212,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471016208}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43c50a6ecb5d9c040965f326cebba396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 325
+--- !u!114 &471016215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471016208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817f4686f8f1ca24fa9c67a386b4da4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 325
+  ball: {fileID: 781281198}
 --- !u!1 &565723342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,8 +1910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5037048fdbeb94d817b24fa8d51350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalRacketSound: {fileID: 1338697811}
   LowPongSound: {fileID: 1013255926}
+  NormalPongSound: {fileID: 0}
 --- !u!1 &1013255925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1923,7 @@ GameObject:
   - component: {fileID: 1013255927}
   - component: {fileID: 1013255926}
   m_Layer: 0
-  m_Name: Ball SFX (Wall)
+  m_Name: LowPongSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1924,7 +1939,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 03f19a023fa6c544da784fb1314f6d3b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 78bad3fdb74e3654787c74aafa5a9844, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3157,7 +3172,7 @@ GameObject:
   - component: {fileID: 1338697812}
   - component: {fileID: 1338697811}
   m_Layer: 0
-  m_Name: Ball SFX (Racket)
+  m_Name: NormalPongSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3173,7 +3188,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: abedabca601d982488c74a15325fdf83, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 62ff7f583127b284ab952e4a8ce7ad10, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
