@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LowPongSound: {fileID: 1013255926}
-  NormalPongSound: {fileID: 0}
+  NormalPongSound: {fileID: 1338697811}
 --- !u!1 &1013255925
 GameObject:
   m_ObjectHideFlags: 0
